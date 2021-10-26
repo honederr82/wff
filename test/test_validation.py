@@ -28,7 +28,3 @@ class TestWFF(unittest.TestCase):
         wff_validator = main.WffValidator()
         self.assertEqual(wff_validator.validate((input)), expected)
 
-
-if __name__ == '__main__':
-    test = TestWFF()
-    test.run()
