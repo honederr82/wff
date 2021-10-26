@@ -15,7 +15,9 @@
 #
 # You should have received a copy of the GNU General Public License
 # along with this program; if not, see <http://www.gnu.org/licenses/>.
+
 import re
+import sys
 
 
 class WffValidator:
@@ -89,5 +91,12 @@ class WffValidator:
 
 
 if __name__ == '__main__':
-    wff_validator = WffValidator()
-    print(wff_validator.validate('¬¬¬¬¬p3'))
+    try:
+        input = sys.argv[1]
+        wff_validator = WffValidator()
+        print('Is WFF: ', wff_validator.validate(input))
+    except:
+        print('Please provide a formula to validate as argument.')
+
+
+
